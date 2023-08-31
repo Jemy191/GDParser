@@ -4,7 +4,6 @@ on:
     types:
       - published
 env:
-  NuGetDirectory: ${{ github.workspace}}/nuget
   Version: ${{ github.event.release.tag_name }}
   PackageFile: GDParser.${{ github.event.release.tag_name }}.nupkg
   
@@ -21,7 +20,7 @@ jobs:
       uses: actions/setup-dotnet@v3
 
     - name: Pack
-      run: dotnet pack --configuration Release -p:PackageVersion=${{ env.Version }} --output ${{ env.NuGetDirectory }}
+      run: dotnet pack --configuration Release -p:PackageVersion=${{ env.Version }} --output .
     
     - name: Install nuget validator
       run: dotnet tool update Meziantou.Framework.NuGetPackageValidation.Tool --global
