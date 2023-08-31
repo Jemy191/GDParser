@@ -31,12 +31,12 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Folder Include="TestScript\"/>
+        <Folder Include="TestScripts\"/>
         <Folder Include="Verified\"/>
     </ItemGroup>
     
     <ItemGroup>
-        <AdditionalFiles Include="TestScript/**/*.gd">
+        <AdditionalFiles Include="TestScripts/**/*.gd">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </AdditionalFiles>
     </ItemGroup>

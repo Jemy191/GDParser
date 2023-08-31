@@ -10,7 +10,7 @@ public class ParserTest
     {
         var data = new TheoryData<string>();
 
-        var scriptPaths = Directory.GetFiles("./")
+        var scriptPaths = Directory.GetFiles("./TestScripts")
             .Where(f => f.EndsWith(".gd"))
             .ToList();
 
