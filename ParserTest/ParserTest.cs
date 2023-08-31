@@ -1,5 +1,5 @@
 using FluentAssertions;
-using Parser;
+using GDParser;
 
 namespace ParserTest;
 
@@ -28,6 +28,7 @@ public class ParserTest
     {
         var setting = new VerifySettings();
         setting.UseFileName(Path.GetFileName(path));
+        setting.UseDirectory("Verified");
 
         var gdClass = ClassParser.Parse(File.ReadAllText(path));
 

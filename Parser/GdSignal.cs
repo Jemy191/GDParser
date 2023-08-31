@@ -1,5 +1,5 @@
 using System.Collections.ObjectModel;
 
-namespace Parser;
+namespace GDParser;
 
 public record GdSignal(string Name, ReadOnlyCollection<GdVariable> Parameters) {}

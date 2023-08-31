@@ -5,13 +5,20 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>default</LangVersion>
+        
         <PackageId>GDParser</PackageId>
         <Version>0.1.0</Version>
         <Title>GDParser</Title>
         <Authors>Émilie Collard</Authors>
         <Description>A simple Godot GDScript parser</Description>
         <PackageTags>Godot GDScript Parser</PackageTags>
+        <PackageProjectUrl>https://github.com/TheJemy191/GDParser</PackageProjectUrl>
+        <PackageLicense>https://github.com/TheJemy191/GDParser/blob/main/LICENSE</PackageLicense>
+        <RepositoryUrl>https://github.com/TheJemy191/GDParser</RepositoryUrl>
+        <RepositoryType>Github</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
-
-
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 </Project>

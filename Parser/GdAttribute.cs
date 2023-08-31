@@ -1,4 +1,4 @@
-namespace Parser;
+namespace GDParser;
 
 public record GdAttribute(string Name)
 {

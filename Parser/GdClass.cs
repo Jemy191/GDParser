@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace Parser;
+namespace GDParser;
 
 public record GdClass(string? ClassName, GdType? Extend, List<GdAttribute> Attributes)
 {

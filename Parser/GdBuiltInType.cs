@@ -1,4 +1,4 @@
-namespace Parser;
+namespace GDParser;
 
 // ReSharper disable InconsistentNaming
 public enum GdBuiltInType

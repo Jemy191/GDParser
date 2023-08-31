@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace Parser;
+namespace GDParser;
 
 public record GdVariable(string Name, GdType Type)
 {
