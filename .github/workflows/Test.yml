@@ -3,7 +3,7 @@ name: Test
 on:
   push:
     branches: ['main']
-    paths: ['Parser/**']
+    paths: ['Parser/**', 'ParserTest/**']
   pull_request:
     branches: [ "*" ]
     paths: ['Parser/**', 'ParserTest/**']
