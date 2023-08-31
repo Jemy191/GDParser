@@ -1,0 +1,24 @@
+﻿{
+  ClassName: ConfigurableScene,
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: Node,
+    IsPath: false
+  },
+  Signals: [
+    {
+      Name: configure,
+      Parameters: [
+        {
+          Name: args,
+          Type: {
+            IsBuiltIn: true,
+            BuiltInType: Variant,
+            IsPath: false
+          },
+          IsVariant: true
+        }
+      ]
+    }
+  ]
+}

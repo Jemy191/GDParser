@@ -1,0 +1,37 @@
+﻿{
+  ClassName: CardPiles,
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: HBoxContainer,
+    IsPath: false
+  },
+  Functions: [
+    {
+      Name: _ready,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    },
+    {
+      Name: _process,
+      Parameters: [
+        {
+          Name: delta,
+          Type: {
+            IsBuiltIn: false,
+            TypeString: float,
+            IsPath: false
+          },
+          IsVariant: false
+        }
+      ],
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    }
+  ]
+}

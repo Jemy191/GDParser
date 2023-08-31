@@ -1,0 +1,169 @@
+﻿{
+  ClassName: CardPath,
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: Path2D,
+    IsPath: false
+  },
+  Attributes: [
+    {
+      Name: tool
+    },
+    {
+      Name: static_unload
+    }
+  ],
+  Variables: [
+    {
+      Name: width,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: int,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export
+        }
+      ],
+      IsVariant: false
+    },
+    {
+      Name: height,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: int,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export
+        }
+      ],
+      IsVariant: false
+    },
+    {
+      Name: curve_ratio,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: float,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export_range(-1, 1)
+        }
+      ],
+      IsVariant: false
+    },
+    {
+      Name: separation,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: float,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export_range(0, 0.3)
+        }
+      ],
+      IsVariant: false
+    },
+    {
+      Name: padding,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: float,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export_range(0, 0.3)
+        }
+      ],
+      IsVariant: false
+    }
+  ],
+  Functions: [
+    {
+      Name: _init,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    },
+    {
+      Name: _ready,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    },
+    {
+      Name: _update_curve,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    },
+    {
+      Name: _card_added,
+      Parameters: [
+        {
+          Name: _node,
+          Type: {
+            IsBuiltIn: true,
+            BuiltInType: Variant,
+            IsPath: false
+          },
+          IsVariant: true
+        }
+      ],
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false
+      }
+    },
+    {
+      Name: _update_card_position,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    },
+    {
+      Name: _compute_card_position,
+      Parameters: [
+        {
+          Name: index,
+          Type: {
+            IsBuiltIn: false,
+            TypeString: float,
+            IsPath: false
+          },
+          IsVariant: false
+        },
+        {
+          Name: count,
+          Type: {
+            IsBuiltIn: false,
+            TypeString: float,
+            IsPath: false
+          },
+          IsVariant: false
+        }
+      ],
+      ReturnType: {
+        IsBuiltIn: false,
+        TypeString: float,
+        IsPath: false
+      }
+    }
+  ]
+}

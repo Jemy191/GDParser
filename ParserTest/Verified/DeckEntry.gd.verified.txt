@@ -1,0 +1,75 @@
+﻿{
+  ClassName: DeckEntry,
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: Button,
+    IsPath: false
+  },
+  Variables: [
+    {
+      Name: deckId,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: int,
+        IsPath: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: chooseDeck,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: ChooseDeck,
+        IsPath: false
+      },
+      IsVariant: false
+    }
+  ],
+  Functions: [
+    {
+      Name: setup,
+      Parameters: [
+        {
+          Name: deckName,
+          Type: {
+            IsBuiltIn: false,
+            TypeString: String,
+            IsPath: false
+          },
+          IsVariant: false
+        },
+        {
+          Name: deckId,
+          Type: {
+            IsBuiltIn: true,
+            BuiltInType: int,
+            IsPath: false
+          },
+          IsVariant: false
+        },
+        {
+          Name: chooseDeck,
+          Type: {
+            IsBuiltIn: false,
+            TypeString: ChooseDeck,
+            IsPath: false
+          },
+          IsVariant: false
+        }
+      ],
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false
+      }
+    },
+    {
+      Name: _on_pressed,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false
+      }
+    }
+  ]
+}

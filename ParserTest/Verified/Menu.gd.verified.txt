@@ -1,0 +1,49 @@
+﻿{
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: Control,
+    IsPath: false
+  },
+  Variables: [
+    {
+      Name: chooseDeck,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: ChooseDeck,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export
+        }
+      ],
+      IsVariant: false
+    }
+  ],
+  Functions: [
+    {
+      Name: _ready,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    },
+    {
+      Name: _on_start_game_pressed,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false
+      }
+    },
+    {
+      Name: _on_edit_deck_pressed,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false
+      }
+    }
+  ]
+}

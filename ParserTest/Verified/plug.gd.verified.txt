@@ -1,0 +1,17 @@
+﻿{
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: res://addons/gd-plug/plug.gd,
+    IsPath: true
+  },
+  Functions: [
+    {
+      Name: _plugging,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false
+      }
+    }
+  ]
+}

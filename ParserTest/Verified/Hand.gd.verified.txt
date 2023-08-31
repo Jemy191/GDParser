@@ -1,0 +1,59 @@
+﻿{
+  ClassName: Hand,
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: Node2D,
+    IsPath: false
+  },
+  Variables: [
+    {
+      Name: card_scene,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: PackedScene,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export
+        }
+      ],
+      IsVariant: false
+    },
+    {
+      Name: card_container,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: Node,
+        IsPath: false
+      },
+      Attributes: [
+        {
+          Name: export
+        }
+      ],
+      IsVariant: false
+    }
+  ],
+  Functions: [
+    {
+      Name: _add_card,
+      Parameters: [
+        {
+          Name: id,
+          Type: {
+            IsBuiltIn: true,
+            BuiltInType: int,
+            IsPath: false
+          },
+          IsVariant: false
+        }
+      ],
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false
+      }
+    }
+  ]
+}

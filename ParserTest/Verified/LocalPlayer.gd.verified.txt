@@ -1,0 +1,48 @@
+﻿{
+  ClassName: LocalPlayer,
+  Extend: {
+    IsBuiltIn: false,
+    TypeString: Control,
+    IsPath: false
+  },
+  Variables: [
+    {
+      Name: _controller,
+      Type: {
+        IsBuiltIn: false,
+        TypeString: LocalPlayerView,
+        IsPath: false
+      },
+      IsVariant: false
+    }
+  ],
+  Functions: [
+    {
+      Name: _setup,
+      Parameters: [
+        {
+          Name: controller,
+          Type: {
+            IsBuiltIn: false,
+            TypeString: LocalPlayerView,
+            IsPath: false
+          },
+          IsVariant: false
+        }
+      ],
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    },
+    {
+      Name: ready_to_play,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: void,
+        IsPath: false
+      }
+    }
+  ]
+}
