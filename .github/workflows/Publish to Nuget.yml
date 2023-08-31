@@ -6,7 +6,7 @@ on:
 env:
   NuGetDirectory: ${{ github.workspace}}/nuget
   Version: ${{ github.event.release.tag_name }}
-  PackageFile: GDParser.${{ env.Version }}.nupkg
+  PackageFile: GDParser.${{ github.event.release.tag_name }}.nupkg
   
 jobs:
   create_nuget:
