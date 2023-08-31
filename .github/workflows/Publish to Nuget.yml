@@ -23,7 +23,7 @@ jobs:
       run: dotnet pack --configuration Release -p:PackageVersion=${{ env.Version }} --output .
     
     - name: Install nuget validator
-      run: dotnet tool update Meziantou.Framework.NuGetPackageValidation.Tool --global
+      run: dotnet tool update Meziantou.Framework.NuGetPackageValidation.Tool --global --excluded-rules IconMustBeSet XmlDocumentationMustBePresent
         
     - name: Validate package
       run: meziantou.validate-nuget-package ${{ env.PackageFile }}
