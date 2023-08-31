@@ -1,13 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworks>netstandard2.0;net7.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>default</LangVersion>
         
         <PackageId>GDParser</PackageId>
-        <Version>0.1.0</Version>
         <Title>GDParser</Title>
         <Authors>Émilie Collard</Authors>
         <Description>A simple Godot GDScript parser</Description>
@@ -18,6 +17,10 @@
         <RepositoryType>Github</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <RootNamespace>GDParser</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+        <NoWarn>$(NoWarn);nullable</NoWarn>
     </PropertyGroup>
     
     <ItemGroup>

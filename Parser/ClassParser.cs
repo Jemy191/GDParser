@@ -6,7 +6,10 @@ public static class ClassParser
 {
     public static GdClass? Parse(string source)
     {
-        using var reader = new StringReader(source.ReplaceLineEndings().Replace("\\" + Environment.NewLine, " "));
+        using var reader = new StringReader(source
+            .Replace("\r\n", Environment.NewLine)
+            .Replace("\n", Environment.NewLine)
+            .Replace("\\" + Environment.NewLine, " "));
 
         GdClass? gdClass = null;
 
@@ -47,7 +50,7 @@ public static class ClassParser
         if (string.IsNullOrWhiteSpace(line))
             return true;
 
-        if (line.StartsWith('\t') || line.StartsWith(' ') || line.StartsWith('#'))
+        if (line.StartsWith("\t") || line.StartsWith(" ") || line.StartsWith("#"))
             return true;
 
         return false;
@@ -93,7 +96,7 @@ public static class ClassParser
 
         if (classDefinitionStart != 0)
             attributes = ParseAttributes(line[..classDefinitionStart]).Where(a => a.IsClassAttribute).ToList();
-        
+
         classAttributes.AddRange(attributes);
         return attributes.Any();
     }
@@ -177,10 +180,10 @@ public static class ClassParser
     {
         if (text.StartsWith("Array["))
             return GdType.TypedArray(new GdType(text[6..^1]));
-        
+
         return new(text);
     }
-    
+
     static Token? GetToken(string line, string token)
     {
         var start = line.IndexOf($"{token} ", StringComparison.Ordinal);

@@ -5,15 +5,16 @@ public class GdType
     public readonly bool IsBuiltIn;
     public readonly GdBuiltInType? BuiltInType;
     public readonly string? TypeString;
-    public readonly bool IsPath = false;
-    public readonly bool IsArray = false;
-    public readonly bool IsTypedArray = false;
-    public readonly GdType? ArrayType = null;
+    public readonly bool IsPath;
+    public readonly bool IsArray;
+    public readonly bool IsTypedArray;
+    public readonly GdType? ArrayType;
     
     internal GdType(string type)
     {
         type = type.Trim('"');
-        var matchingType = Enum.GetValues<GdBuiltInType>()
+        var matchingType = Enum.GetValues(typeof(GdBuiltInType))
+            .Cast<GdBuiltInType>()
             .Where(e => e.ToString() == type)
             .ToList();
 
