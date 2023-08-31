@@ -3,7 +3,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: Button,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Variables: [
     {
@@ -11,7 +13,9 @@
       Type: {
         IsBuiltIn: true,
         BuiltInType: int,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       IsVariant: false
     },
@@ -20,7 +24,9 @@
       Type: {
         IsBuiltIn: false,
         TypeString: ChooseDeck,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       IsVariant: false
     }
@@ -32,9 +38,11 @@
         {
           Name: deckName,
           Type: {
-            IsBuiltIn: false,
-            TypeString: String,
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: String,
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         },
@@ -43,7 +51,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: int,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         },
@@ -52,7 +62,9 @@
           Type: {
             IsBuiltIn: false,
             TypeString: ChooseDeck,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }
@@ -60,7 +72,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -68,7 +82,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]

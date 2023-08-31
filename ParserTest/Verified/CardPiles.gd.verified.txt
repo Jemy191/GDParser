@@ -3,7 +3,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: HBoxContainer,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Functions: [
     {
@@ -11,7 +13,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -20,9 +24,11 @@
         {
           Name: delta,
           Type: {
-            IsBuiltIn: false,
-            TypeString: float,
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: float,
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }
@@ -30,7 +36,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]

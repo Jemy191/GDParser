@@ -1,0 +1,688 @@
+﻿{
+  Variables: [
+    {
+      Name: array_test,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: false,
+          TypeString: test,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_variant,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Variant,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_aabb,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: AABB,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_basis,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Basis,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_bool,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: bool,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_callable,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Callable,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_color,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Color,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_dictionary,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Dictionary,
+          IsPath: false,
+          IsArray: true,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_float,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: float,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_int,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: int,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_nodepath,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: NodePath,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_object,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Object,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedbytearray,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedByteArray,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedcolorarray,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedColorArray,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedfloat32array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedFloat32Array,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedfloat64array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedFloat64Array,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedint32array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedInt32Array,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedint64array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedInt64Array,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedstringarray,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedStringArray,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedvector2array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedVector2Array,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_packedvector3array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: PackedVector3Array,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_plane,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Plane,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_projection,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Projection,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_quaternion,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Quaternion,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_rect2,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Rect2,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_rect2i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Rect2i,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_rid,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: RID,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_signal,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Signal,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_string,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: String,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_stringname,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: StringName,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_transform2d,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Transform2D,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_transform3d,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Transform3D,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_vector2,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Vector2,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_vector2i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Vector2i,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_vector3,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Vector3,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_vector3i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Vector3i,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_vector4,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Vector4,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    },
+    {
+      Name: array_vector4i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: true,
+        ArrayType: {
+          IsBuiltIn: true,
+          BuiltInType: Vector4i,
+          IsPath: false,
+          IsArray: false,
+          IsTypedArray: false
+        }
+      },
+      IsVariant: false
+    }
+  ]
+}

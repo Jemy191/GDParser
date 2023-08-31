@@ -3,7 +3,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: Control,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Variables: [
     {
@@ -11,11 +13,14 @@
       Type: {
         IsBuiltIn: false,
         TypeString: PackedScene,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -25,11 +30,14 @@
       Type: {
         IsBuiltIn: false,
         TypeString: PackedScene,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -42,9 +50,18 @@
         {
           Name: decks,
           Type: {
-            IsBuiltIn: false,
-            TypeString: Array[DeckData],
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: Array,
+            IsPath: false,
+            IsArray: true,
+            IsTypedArray: true,
+            ArrayType: {
+              IsBuiltIn: false,
+              TypeString: DeckData,
+              IsPath: false,
+              IsArray: false,
+              IsTypedArray: false
+            }
           },
           IsVariant: false
         }
@@ -52,7 +69,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -60,7 +79,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: int,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -68,7 +89,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ],
@@ -81,7 +104,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: int,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }

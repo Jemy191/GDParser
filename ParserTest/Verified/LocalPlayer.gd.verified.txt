@@ -3,7 +3,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: Control,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Variables: [
     {
@@ -11,7 +13,9 @@
       Type: {
         IsBuiltIn: false,
         TypeString: LocalPlayerView,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       IsVariant: false
     }
@@ -25,7 +29,9 @@
           Type: {
             IsBuiltIn: false,
             TypeString: LocalPlayerView,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }
@@ -33,7 +39,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -41,7 +49,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]

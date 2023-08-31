@@ -1,12 +1,4 @@
 ﻿{
-  ClassName: Arena,
-  Extend: {
-    IsBuiltIn: false,
-    TypeString: ConfigurableScene,
-    IsPath: false,
-    IsArray: false,
-    IsTypedArray: false
-  },
   Variables: [
     {
       Name: _game_startup,
@@ -49,29 +41,6 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false,
-        IsArray: false,
-        IsTypedArray: false
-      }
-    },
-    {
-      Name: on_configure,
-      Parameters: [
-        {
-          Name: deck_id_in,
-          Type: {
-            IsBuiltIn: true,
-            BuiltInType: Variant,
-            IsPath: false,
-            IsArray: false,
-            IsTypedArray: false
-          },
-          IsVariant: true
-        }
-      ],
-      ReturnType: {
-        IsBuiltIn: true,
-        BuiltInType: Variant,
         IsPath: false,
         IsArray: false,
         IsTypedArray: false

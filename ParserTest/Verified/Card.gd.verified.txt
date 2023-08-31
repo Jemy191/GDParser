@@ -3,7 +3,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: PathFollow2D,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Variables: [
     {
@@ -11,11 +13,14 @@
       Type: {
         IsBuiltIn: false,
         TypeString: Label,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -25,11 +30,14 @@
       Type: {
         IsBuiltIn: false,
         TypeString: Label,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -42,18 +50,22 @@
         {
           Name: name,
           Type: {
-            IsBuiltIn: false,
-            TypeString: String,
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: String,
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         },
         {
           Name: cost,
           Type: {
-            IsBuiltIn: false,
-            TypeString: String,
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: String,
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }
@@ -61,7 +73,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]

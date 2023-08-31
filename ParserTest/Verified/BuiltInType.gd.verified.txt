@@ -1,0 +1,422 @@
+﻿{
+  Variables: [
+    {
+      Name: var_variant,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: true
+    },
+    {
+      Name: var_aabb,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: AABB,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Array,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_basis,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Basis,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_bool,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: bool,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_callable,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Callable,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_color,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Color,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_dictionary,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Dictionary,
+        IsPath: false,
+        IsArray: true,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_float,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: float,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_int,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: int,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_nodepath,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: NodePath,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_object,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Object,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedbytearray,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedByteArray,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedcolorarray,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedColorArray,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedfloat32array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedFloat32Array,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedfloat64array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedFloat64Array,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedint32array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedInt32Array,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedint64array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedInt64Array,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedstringarray,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedStringArray,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedvector2array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedVector2Array,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_packedvector3array,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: PackedVector3Array,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_plane,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Plane,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_projection,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Projection,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_quaternion,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Quaternion,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_rect2,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Rect2,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_rect2i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Rect2i,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_rid,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: RID,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_signal,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Signal,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_string,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: String,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_stringname,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: StringName,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_transform2d,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Transform2D,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_transform3d,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Transform3D,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_vector2,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Vector2,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_vector2i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Vector2i,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_vector3,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Vector3,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_vector3i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Vector3i,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_vector4,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Vector4,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    },
+    {
+      Name: var_vector4i,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Vector4i,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: false
+    }
+  ]
+}

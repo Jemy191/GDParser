@@ -2,15 +2,19 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: ConfigurableScene,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Variables: [
     {
       Name: createNewDeck,
       Type: {
-        IsBuiltIn: false,
-        TypeString: bool,
-        IsPath: false
+        IsBuiltIn: true,
+        BuiltInType: bool,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       IsVariant: false
     }
@@ -21,7 +25,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -32,7 +38,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: Variant,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: true
         }
@@ -40,7 +48,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -48,7 +58,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]

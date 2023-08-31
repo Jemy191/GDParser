@@ -2,7 +2,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: res://addons/gd-plug/plug.gd,
-    IsPath: true
+    IsPath: true,
+    IsArray: false,
+    IsTypedArray: false
   },
   Functions: [
     {
@@ -10,7 +12,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]

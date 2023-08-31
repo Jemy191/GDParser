@@ -31,7 +31,6 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Folder Include="TestScripts\"/>
         <Folder Include="Verified\"/>
     </ItemGroup>
     

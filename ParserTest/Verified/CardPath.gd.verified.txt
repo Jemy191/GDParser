@@ -3,14 +3,18 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: Path2D,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Attributes: [
     {
-      Name: tool
+      Name: tool,
+      IsClassAttribute: true
     },
     {
-      Name: static_unload
+      Name: static_unload,
+      IsClassAttribute: true
     }
   ],
   Variables: [
@@ -19,11 +23,14 @@
       Type: {
         IsBuiltIn: true,
         BuiltInType: int,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -33,11 +40,14 @@
       Type: {
         IsBuiltIn: true,
         BuiltInType: int,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -45,13 +55,16 @@
     {
       Name: curve_ratio,
       Type: {
-        IsBuiltIn: false,
-        TypeString: float,
-        IsPath: false
+        IsBuiltIn: true,
+        BuiltInType: float,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export_range(-1, 1)
+          Name: export_range(-1, 1),
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -59,13 +72,16 @@
     {
       Name: separation,
       Type: {
-        IsBuiltIn: false,
-        TypeString: float,
-        IsPath: false
+        IsBuiltIn: true,
+        BuiltInType: float,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export_range(0, 0.3)
+          Name: export_range(0, 0.3),
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -73,13 +89,16 @@
     {
       Name: padding,
       Type: {
-        IsBuiltIn: false,
-        TypeString: float,
-        IsPath: false
+        IsBuiltIn: true,
+        BuiltInType: float,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export_range(0, 0.3)
+          Name: export_range(0, 0.3),
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -91,7 +110,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -99,7 +120,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -107,7 +130,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -118,7 +143,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: Variant,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: true
         }
@@ -126,7 +153,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -134,7 +163,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: void,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -143,26 +174,32 @@
         {
           Name: index,
           Type: {
-            IsBuiltIn: false,
-            TypeString: float,
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: float,
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         },
         {
           Name: count,
           Type: {
-            IsBuiltIn: false,
-            TypeString: float,
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: float,
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }
       ],
       ReturnType: {
-        IsBuiltIn: false,
-        TypeString: float,
-        IsPath: false
+        IsBuiltIn: true,
+        BuiltInType: float,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]

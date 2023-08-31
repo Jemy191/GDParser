@@ -3,7 +3,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: Node,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Signals: [
     {
@@ -14,7 +16,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: Variant,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: true
         }

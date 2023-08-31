@@ -6,23 +6,36 @@ public class GdType
     public readonly GdBuiltInType? BuiltInType;
     public readonly string? TypeString;
     public readonly bool IsPath = false;
-
-    public GdType(string type)
+    public readonly bool IsArray = false;
+    public readonly bool IsTypedArray = false;
+    public readonly GdType? ArrayType = null;
+    
+    internal GdType(string type)
     {
         type = type.Trim('"');
         var matchingType = Enum.GetValues<GdBuiltInType>()
             .Where(e => e.ToString() == type)
             .ToList();
 
-        if (matchingType.Count != 1)
+        if (matchingType.Count == 0)
         {
             TypeString = type;
             IsPath = TypeString?.StartsWith("res://") ?? false;
             return;
         }
 
-        IsBuiltIn = true;
         BuiltInType = matchingType.Single();
+        IsArray = BuiltInType is GdBuiltInType.Array or GdBuiltInType.Dictionary;
+        IsBuiltIn = true;
+    }
+
+    GdType(GdType type)// Typed array ctor
+    {
+        BuiltInType = GdBuiltInType.Array;
+        IsBuiltIn = true;
+        IsArray = true;
+        IsTypedArray = true;
+        ArrayType = type;
     }
 
     GdType(GdBuiltInType type)
@@ -31,7 +44,8 @@ public class GdType
         IsBuiltIn = true;
     }
 
-    public static GdType Variant => new(GdBuiltInType.Variant);
+    internal static GdType Variant => new(GdBuiltInType.Variant);
 
     public override string? ToString() => TypeString ?? BuiltInType.ToString();
+    public static GdType TypedArray(GdType gdType) => new GdType(gdType);
 }

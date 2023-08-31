@@ -1,4 +1,6 @@
-﻿namespace GDParser;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace GDParser;
 
 public static class ClassParser
 {
@@ -16,14 +18,12 @@ public static class ClassParser
         do
         {
             line = reader.ReadLine();
-            if (string.IsNullOrWhiteSpace(line))
-                continue;
 
-            if (line.StartsWith('\t') || line.StartsWith(' '))
+            if (CanIgnoreLine(line))
                 continue;
 
             line = line.Trim();
-            
+
             gdClass ??= ParseClass(line, ref extend, ref className, classAttributes);
 
             if (gdClass is null)
@@ -31,22 +31,33 @@ public static class ClassParser
 
             if (ParseLineVariable(line, gdClass))
                 continue;
-            
-            if(ParseFunction(line, gdClass, reader, true))
+
+            if (ParseFunction(line, gdClass, reader, true))
                 continue;
-            
-            ParseFunction(line, gdClass, reader);
+
+            _ = ParseFunction(line, gdClass, reader);
 
         } while (line is not null);
 
         return gdClass;
     }
 
+    static bool CanIgnoreLine([NotNullWhen(false)] string? line)
+    {
+        if (string.IsNullOrWhiteSpace(line))
+            return true;
+
+        if (line.StartsWith('\t') || line.StartsWith(' ') || line.StartsWith('#'))
+            return true;
+
+        return false;
+    }
+
     static GdClass? ParseClass(string line, ref GdType? extend, ref string? className, List<GdAttribute> classAttributes)
     {
         var extendToken = GetToken(line, "extends");
         if (extendToken is not null)
-            extend = new GdType(line[extendToken.End..].Trim());
+            extend = ParseType(line[extendToken.End..].Trim());
 
         var classNameToken = GetToken(line, "class_name");
         if (classNameToken is not null)
@@ -57,27 +68,34 @@ public static class ClassParser
                 className = line[classNameToken.End..extendToken.Start].Trim();
         }
 
-        var foundAttributes = false;
-        if (extend is null && className is null  && !string.IsNullOrWhiteSpace(line))
-        {
-            var attributes = ResolveAttributes(line);
-            foundAttributes = attributes.Any();
-            classAttributes.AddRange(attributes);
-        }
+        var foundAttributes = ParseClassAttributes(line, extend, className, classAttributes, extendToken, classNameToken);
+
+        if (foundAttributes && extendToken is null && classNameToken is null)
+            return null;
+
+        if (extendToken is null && classNameToken is null && !string.IsNullOrWhiteSpace(line))
+            return new(className, extend, classAttributes);// We are in the class body and class name and extend cant be in class body
+
+        return null;
+    }
+    static bool ParseClassAttributes(string line, GdType? extend, string? className, List<GdAttribute> classAttributes, Token? extendToken, Token? classNameToken)
+    {
+        var attributes = new List<GdAttribute>();
+
+        if (extend is null && className is null && !string.IsNullOrWhiteSpace(line))
+            attributes = ParseAttributes(line).Where(a => a.IsClassAttribute).ToList();
 
         var classDefinitionStart = 0;
         if (extendToken is not null)
             classDefinitionStart = extendToken.Start;
         if (classNameToken is not null && classNameToken.Start < classDefinitionStart)
             classDefinitionStart = classNameToken.Start;
-        
-        if(classDefinitionStart != 0)
-            classAttributes.AddRange(ResolveAttributes(line[..classDefinitionStart]));
 
-        if (extendToken is null && classNameToken is null && !string.IsNullOrWhiteSpace(line) && !foundAttributes)
-            return new(className, extend, classAttributes);// We are in the class body and class name and extend cant be in class body
+        if (classDefinitionStart != 0)
+            attributes = ParseAttributes(line[..classDefinitionStart]).Where(a => a.IsClassAttribute).ToList();
         
-        return null;
+        classAttributes.AddRange(attributes);
+        return attributes.Any();
     }
 
     static bool ParseFunction(string line, GdClass gdClass, TextReader reader, bool parseSignal = false)
@@ -89,7 +107,7 @@ public static class ClassParser
         while (!line.Contains(')'))
         {
             var newLine = reader.ReadLine();
-            if(newLine is null)
+            if (newLine is null)
                 break;
             line += newLine;
         }
@@ -100,7 +118,7 @@ public static class ClassParser
         var returnType = GdType.Variant;
 
         if (typedReturnToken is not null)
-            returnType = new(signature[typedReturnToken.End..].Split(':')[0].Trim());
+            returnType = ParseType(signature[typedReturnToken.End..].Split(':')[0].Trim());
 
         var openingBracketSplit = signature.Split('(');
 
@@ -113,7 +131,7 @@ public static class ClassParser
 
         var parameters = parametersStrings.Select(ParseVariable).ToList();
 
-        if(parseSignal)
+        if (parseSignal)
             gdClass.Add(new GdSignal(name, parameters.AsReadOnly()));
         else
             gdClass.Add(new GdFunction(name, parameters.AsReadOnly(), returnType));
@@ -126,7 +144,7 @@ public static class ClassParser
         if (varToken is null)
             return false;
 
-        var attributes = ResolveAttributes(line[..varToken.Start].Trim());
+        var attributes = ParseAttributes(line[..varToken.Start].Trim());
 
         var declaration = line[varToken.End..].Split('=')[0].Trim();
 
@@ -136,7 +154,7 @@ public static class ClassParser
 
         return true;
     }
-    static List<GdAttribute> ResolveAttributes(string line) => line
+    static List<GdAttribute> ParseAttributes(string line) => line
         .Split('@')
         .Where(a => !string.IsNullOrWhiteSpace(a))
         .Select(a => new GdAttribute(a.Trim()))
@@ -150,14 +168,22 @@ public static class ClassParser
 
         var type = GdType.Variant;
         if (declaration.Length != 1)
-            type = new(declaration[1].Trim());
+            type = ParseType(declaration[1].Trim());
 
         return new(name, type);
     }
 
+    static GdType ParseType(string text)
+    {
+        if (text.StartsWith("Array["))
+            return GdType.TypedArray(new GdType(text[6..^1]));
+        
+        return new(text);
+    }
+    
     static Token? GetToken(string line, string token)
     {
-        var start = line.IndexOf($"{token} ", StringComparison.Ordinal); 
+        var start = line.IndexOf($"{token} ", StringComparison.Ordinal);
         if (start == -1)
             return null;
         return new(start, start + token.Length);

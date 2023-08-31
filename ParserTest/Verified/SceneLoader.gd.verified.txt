@@ -2,7 +2,9 @@
   Extend: {
     IsBuiltIn: false,
     TypeString: Node,
-    IsPath: false
+    IsPath: false,
+    IsArray: false,
+    IsTypedArray: false
   },
   Variables: [
     {
@@ -10,11 +12,14 @@
       Type: {
         IsBuiltIn: false,
         TypeString: PackedScene,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -24,11 +29,14 @@
       Type: {
         IsBuiltIn: false,
         TypeString: PackedScene,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -38,11 +46,14 @@
       Type: {
         IsBuiltIn: false,
         TypeString: PackedScene,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       Attributes: [
         {
-          Name: export
+          Name: export,
+          IsClassAttribute: false
         }
       ],
       IsVariant: false
@@ -52,7 +63,9 @@
       Type: {
         IsBuiltIn: false,
         TypeString: Node,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       },
       IsVariant: false
     }
@@ -63,7 +76,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -71,7 +86,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -82,7 +99,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: int,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }
@@ -90,7 +109,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -99,9 +120,11 @@
         {
           Name: createNewDeck,
           Type: {
-            IsBuiltIn: false,
-            TypeString: bool,
-            IsPath: false
+            IsBuiltIn: true,
+            BuiltInType: bool,
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         }
@@ -109,7 +132,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -120,7 +145,9 @@
           Type: {
             IsBuiltIn: false,
             TypeString: PackedScene,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: false
         },
@@ -129,7 +156,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: Variant,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: true
         }
@@ -137,7 +166,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     },
     {
@@ -148,7 +179,9 @@
           Type: {
             IsBuiltIn: true,
             BuiltInType: Variant,
-            IsPath: false
+            IsPath: false,
+            IsArray: false,
+            IsTypedArray: false
           },
           IsVariant: true
         }
@@ -156,7 +189,9 @@
       ReturnType: {
         IsBuiltIn: true,
         BuiltInType: Variant,
-        IsPath: false
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
       }
     }
   ]
