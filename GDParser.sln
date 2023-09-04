@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{289F2A50-BD07-495A-97AC-A3AB7879D800}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDParser", "GDParser\GDParser.csproj", "{289F2A50-BD07-495A-97AC-A3AB7879D800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserTest", "ParserTest\ParserTest.csproj", "{74B5256F-8687-4189-A3DE-2DA752128A35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDParser.Test", "GDParser.Test\GDParser.Test.csproj", "{74B5256F-8687-4189-A3DE-2DA752128A35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

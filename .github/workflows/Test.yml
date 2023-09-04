@@ -3,10 +3,10 @@ name: Test
 on:
   push:
     branches: ['main']
-    paths: ['Parser/**', 'ParserTest/**']
+    paths: ['GDParser/**', 'GDParser.Test/**']
   pull_request:
     branches: [ "*" ]
-    paths: ['Parser/**', 'ParserTest/**']
+    paths: ['GDParser/**', 'GDParser.Test/**']
 
 jobs:
   build:

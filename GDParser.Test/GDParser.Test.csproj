@@ -7,6 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <RootNamespace>ParserTest</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Parser\Parser.csproj"/>
+        <ProjectReference Include="..\GDParser\GDParser.csproj" />
     </ItemGroup>
     
     <ItemGroup>
