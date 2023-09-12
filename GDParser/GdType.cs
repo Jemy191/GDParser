@@ -48,5 +48,10 @@ public class GdType
     internal static GdType Variant => new(GdBuiltInType.Variant);
 
     public override string? ToString() => TypeString ?? BuiltInType.ToString();
+    public string ToCSharpTypeString()
+    {
+        if (BuiltInType == GdBuiltInType.String) return "string";
+        return TypeString ?? BuiltInType.ToString();
+    }
     public static GdType TypedArray(GdType gdType) => new GdType(gdType);
 }
