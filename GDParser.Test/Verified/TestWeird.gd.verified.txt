@@ -37,16 +37,6 @@
       }
     },
     {
-      Name: _on_start_game_pressed,
-      ReturnType: {
-        IsBuiltIn: true,
-        BuiltInType: void,
-        IsPath: false,
-        IsArray: false,
-        IsTypedArray: false
-      }
-    },
-    {
       Name: _on_edit_deck_pressed,
       ReturnType: {
         IsBuiltIn: true,
