@@ -48,29 +48,6 @@ public class GdType
     internal static GdType Variant => new(GdBuiltInType.Variant);
 
     public override string? ToString() => TypeString ?? BuiltInType.ToString();
-    public string? ToCSharpTypeString() => BuiltInType switch
-    {
-        GdBuiltInType.@bool => "bool",
-        GdBuiltInType.@int => "long",
-        GdBuiltInType.@float => "double",
-        GdBuiltInType.String => "string",
-        GdBuiltInType.Object => "Godot.GodotObject",
-        GdBuiltInType.Callable => "Godot.Callable",
-        GdBuiltInType.Signal => "Godot.Signal",
-        GdBuiltInType.Dictionary => "Godot.Collections.Dictionary",
-        GdBuiltInType.Array when !IsTypedArray => "Godot.Collections.Array",
-        GdBuiltInType.Array when IsTypedArray => $"Godot.Collections.Array<{ArrayType.ToCSharpTypeString()}>",
-        GdBuiltInType.PackedByteArray => "byte[]",
-        GdBuiltInType.PackedInt32Array => "int[]",
-        GdBuiltInType.PackedInt64Array => "long[]",
-        GdBuiltInType.PackedFloat32Array => "float[]",
-        GdBuiltInType.PackedFloat64Array => "double[]",
-        GdBuiltInType.PackedStringArray => "string[]",
-        GdBuiltInType.PackedVector2Array => "Godot.Vector2[]",
-        GdBuiltInType.PackedVector3Array => "Godot.Vector3[]",
-        GdBuiltInType.PackedColorArray => "Godot.Color[]",
-        _ => TypeString ?? BuiltInType.ToString()
-    };
 
     public static GdType TypedArray(GdType gdType) => new GdType(gdType);
 }
