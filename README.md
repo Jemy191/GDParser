@@ -5,6 +5,12 @@ This project is mainly to simplify C# -> GDScript interoperability.
 
 #### Get it here -> https://www.nuget.org/packages/GDParser/
 
+## Feature
+- [X] Parse Class structure(Class_name, extend, var, func, signal).
+- [ ] Parse Enum.
+- [ ] Parse code(Will not be supported for now).
+And more to come.
+
 ### How to use
 ```csharp
 using GDParser;
