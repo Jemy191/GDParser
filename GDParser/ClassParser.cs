@@ -165,7 +165,7 @@ public static class ClassParser
 
     static GdVariable ParseVariable(string text)
     {
-        var declaration = text.Trim().Split(':');
+        var declaration = text.Trim().Trim(';').Split(':');
 
         var name = declaration[0].Trim();
 

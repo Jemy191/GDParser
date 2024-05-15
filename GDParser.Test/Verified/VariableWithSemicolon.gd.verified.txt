@@ -1,0 +1,49 @@
+{
+  ClassName: ConfigTest,
+  Variables: [
+    {
+      Name: snake_case_variable,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: true
+    },
+    {
+      Name: property_var,
+      Type: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      },
+      IsVariant: true
+    }
+  ],
+  Functions: [
+    {
+      Name: snake_case_function,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      }
+    },
+    {
+      Name: get_property_var,
+      ReturnType: {
+        IsBuiltIn: true,
+        BuiltInType: Variant,
+        IsPath: false,
+        IsArray: false,
+        IsTypedArray: false
+      }
+    }
+  ]
+}
