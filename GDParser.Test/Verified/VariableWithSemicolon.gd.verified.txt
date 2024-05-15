@@ -16,12 +16,12 @@
       Name: property_var,
       Type: {
         IsBuiltIn: true,
-        BuiltInType: Variant,
+        BuiltInType: int,
         IsPath: false,
         IsArray: false,
         IsTypedArray: false
       },
-      IsVariant: true
+      IsVariant: false
     }
   ],
   Functions: [
