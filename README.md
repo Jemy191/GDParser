@@ -1,3 +1,6 @@
+# Abandoned
+This project is abandoned if anyone want to take ownership of it contact me github@jemy191.ca.
+
 # GDParser
 ## ⚠In active developement
 Some thing can change but not that much.
